@@ -34,8 +34,8 @@ def func02():
     #理想的状态下 c = 100, a = 200, b = 300
     a,b,c = 100,200,300
     c,a,b = a,b,c
-    print(c)
-    print(b)
-    print(a)
+    print(f"c = {c}")
+    print(f"b = {b}")
+    print(f"a = {a}")
 
 func02()
