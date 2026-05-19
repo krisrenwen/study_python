@@ -9,6 +9,8 @@ print(sentence[0:7:1])
 print(sentence[4])
 
 greeting = "hello world !!! I am Kris !!!"
+print("greetings")
+
 
 """字符串也可以循环遍历"""
 for i in sentence:
