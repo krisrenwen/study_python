@@ -12,7 +12,9 @@
 def recursive_statement():
     sentence = input("请输入你的文字内容: ")
     if sentence == sentence[::-1]:
-        print(sentence)
+        return True
+    else:
+        return False
         
 
 # recursive_statement()
