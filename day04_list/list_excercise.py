@@ -2,13 +2,19 @@
 """
 生成 1-20的平方列表
 """
-def generate_multi():
-    # 我先生成一个空列表，然后每一次将1到20的每一个平方都放到列表中
-    num_list = []
-    for i in range(1,21):
-        #要习惯这个写法
-        num_list.append(i ** 2)
+# def generate_multi():
+#     # 我先生成一个空列表，然后每一次将1到20的每一个平方都放到列表中
+#     num_list = []
+#     for i in range(1,21):
+#         #要习惯这个写法
+#         num_list.append(i ** 2)
 
+#     print(num_list)
+def generate_square():
+    #如果我要生成列表的平方的话我需要计算每一个1~20的平方
+    #然后放到一个空的列表中
+    #尝试一下列表推导式
+    num_list = [num ** 2 for num in range(1,21)]
     print(num_list)
 
 # generate_multi()
@@ -28,15 +34,23 @@ def generate_multi_version2():
 num_list = [19,23,54,64,87,20,109,232,123,43,26,55,72]
 """
 
-def cal_even_multiple_of_list():
+# def cal_even_multiple_of_list():
+#     num_list = [19,23,54,64,87,20,109,232,123,43,26,55,72]
+#     new_list =[]
+#     # 那我首先要先遍历这个列表，然后找出所有的偶数
+#     # 然后放到新的列表中
+#     for num in num_list:
+#         if num % 2 == 0:
+#             new_list.append(num * num)
+#     print(new_list) 
+
+def find_square_of_even():
     num_list = [19,23,54,64,87,20,109,232,123,43,26,55,72]
-    new_list =[]
-    # 那我首先要先遍历这个列表，然后找出所有的偶数
-    # 然后放到新的列表中
-    for num in num_list:
-        if num % 2 == 0:
-            new_list.append(num * num)
-    print(new_list) 
+    #我要去找所有的偶数，这是第一个要求
+    #第二个要求就是找出这些偶数以后计算平方
+    #最后打印出新的列表
+    new_list = [num ** 2 for num in num_list if num % 2 == 0]
+    print(new_list)
 
 # cal_even_multiple_of_list()
 
@@ -54,6 +68,19 @@ cal_even_mul_list2()
 """
 合并两个列表中的元素，然后进行去重操作
 """
+
+def merge_list_unique():
+    list1 = [19,23,54,64,875,20,109,232,123,54]
+    list2 = [55,80,72,35,60,123,54,29,91]
+    #我首先要先合并两个列表到一个列表中
+    num_list = list1 + list2
+    print("现在合并后的元素列表：", num_list)
+    new_list = []
+    for num in num_list:
+        if num not in new_list:
+            new_list.append(num)
+    print(new_list)
+
 def remove_repeat_elements():
     list1 = [19,23,54,64,875,20,109,232,123,54]
     list2 = [55,80,72,35,60,123,54,29,91]

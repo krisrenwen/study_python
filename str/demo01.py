@@ -5,10 +5,10 @@
 """
 
 sentence = "Hello - python"
+# 这里的语法就是[下标起始的位置，然后结束下标(不包括自身)，然后步长多少]
 print(sentence[0:7:1])
 print(sentence[4])
 
-greeting = "hello world !!! I am Kris !!!"
 
 """字符串也可以循环遍历"""
 for i in sentence:
